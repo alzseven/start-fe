@@ -1,72 +1,52 @@
-console.log("app");
+console.log("app.js");
 
-// Create
-// var todos = ["운동"];
-// var todo = "게임";
-// todo.push(todo);
-// console.log(todos);
-
-// Read
-
-// todos.forEach(function (todo) {
-//   console.log(todo);
-// });
-
-// Update
-// var todos = ["운동", "게임"];
-// var updateTodo = "게임";
-// var updateIndex = todos.findIndex(function (todo) {
-//   return todo === updateTodo;
-// });
-// todos[updateIndex] = "공부";
-// console.log(todos);
-
-// Delete
-// var todos = ["운동", "공부", "목욕"];
-// var deleteTodo = "공부";
-// var deleteIndex = todos.findIndex(function (todo) {
-//   return todo === deleteTodo;
-// });
-// todos.splice(deleteIndex, 1);
-// console.log(todos);
-
-// var isMan = false;
-// if (isMan) {
-//   console.log("1");
-// } else if (!isMan && isHero) {
-// } else {
-//   console.log("2");
+// function log(str){
+//     console.log(str);
 // }
 
-//window.alert("1");
-// var who = prompt('당신은 누구세요?');
-// console.log(who);
-
-// var isDelete = confirm("정말 삭제하시겠습니까?");
-// console.log(isDelete);
-
-// function sum(a, b) {
-//   return a + b;
+// var log = function(str){
+//     console.log(str);
 // }
-// console.log(sum(1, 2));
 
-// var car = {
-//   year: "2014",
-//   starting: function () {
-//     console.log("starting..");
-//   },
+// log("hello");
+
+// var image = {
+//     width: 100,
+//     height: 100,
+//     name: '1.png'
 // };
 
-// car.starting();
+// var image1 = [1, 2, 3, 4, 5, 6, 'a', {}];
+// image1[0] = a;
 
-// (function () {
-//   var a = "a";
-//   console.log(a);
-// })();
+// var data = null;
+// var data1 = '';
+// var data2;
 
-function sum(x, y) {
-  if (!y) y = 1;
-  console.log(x + y);
-}
-console.log(sum(3));
-console.log(sum(3, 3));
+// console.log(data, data1, data2);
+
+// var imageWidth = 100;
+// var imageHeight = 100;
+// var imageName = "1.png";
+
+//console.log(image, image1);
+
+// console.log(1 + 2);
+// console.log('a' + 'b');
+// var count = 1;
+// var number = '2';
+
+//console.log(count + number);
+
+// console.log('' == '0');
+// console.log(0 === '', 0 == '');
+// var isHero = true;
+
+// if(isHero){
+//     console.log('hero');
+// }
+
+// console.log(typeof 1);
+// console.log(typeof []);
+// console.log(typeof '1');
+// console.log(typeof {});
