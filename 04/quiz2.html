@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ChessBoard</title>
+    <style>
+      #board {
+        width: 400px;
+        height: 400px;
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px 100px;
+        border: solid gray 5px;
+      }
+      .black {
+        background-color: black;
+      }
+      .white {
+        background-color: white;
+      }
+      .clicked {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="board"></div>
+    <script>
+      var selectedCell = undefined;
+      var board = document.getElementById("board");
+      for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 4; j++) {
+          var clsName = (i + j) % 2 == 0 ? "black" : "white";
+          var span = document.createElement("span");
+          span.className = clsName;
+          span.addEventListener("click", function (event) {
+            if (selectedCell != undefined) {
+              selectedCell.className = selectedCell.className.replace(
+                "clicked",
+                ""
+              );
+            }
+            selectedCell = event.currentTarget;
+            selectedCell.className = selectedCell.className + " clicked";
+          });
+          board.appendChild(span);
+        }
+      }
+    </script>
+  </body>
+</html>
