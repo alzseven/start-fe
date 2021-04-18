@@ -1,7 +1,7 @@
-const $box = document.querySelector(".box");
-const $bug = document.getElementById("bug");
-const $point = document.getElementById("point");
-const $life = document.getElementById("life");
+const $box = document.querySelector('.box');
+const $bug = document.getElementById('bug');
+const $point = document.getElementById('point');
+const $life = document.getElementById('life');
 let isBugAlive = true;
 
 function PlaceBugInRandomPosition() {
@@ -15,19 +15,20 @@ function PlaceBugInRandomPosition() {
 }
 
 function IncreasePoint() {
-  $point.textContent = parseInt($point.textContent) + 1;
-}
-
-function DecreaseLife() {
-  if ($life.textContent == 0) {
-    AlertGameOver();
-    return;
-  }
-  $life.textContent = parseInt($life.textContent) - 1;
+  $point.textContent = parseInt($point.textContent, 10) + 1;
 }
 
 function AlertGameOver() {
-  alert("game over");
+  // eslint-disable-next-line no-alert
+  alert('game over');
+}
+
+function DecreaseLife() {
+  if ($life.textContent === '0') {
+    AlertGameOver();
+    return;
+  }
+  $life.textContent = parseInt($life.textContent, 10) - 1;
 }
 
 function OnclickBox() {
@@ -45,6 +46,6 @@ function OnclickBug() {
   }
 }
 
-$box.addEventListener("click", OnclickBox);
+$box.addEventListener('click', OnclickBox);
 
-$bug.addEventListener("click", OnclickBug);
+$bug.addEventListener('click', OnclickBug);

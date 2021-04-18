@@ -1,17 +1,17 @@
-var $select = null;
+let $select = null;
 
 function printBoards() {
-  var $board = document.getElementById("board");
-  var boardCount = 16;
-  var isWhite = false;
-  var className = "";
-  var boardLineCount = 4;
-  var str = "";
+  const $board = document.getElementById('board');
+  const boardCount = 16;
+  const boardLineCount = 4;
+  let isWhite = false;
+  let className = '';
+  let str = '';
 
-  for (var i = 0; i < boardCount; i++) {
-    className = isWhite ? "black" : "white";
+  for (let i = 0; i < boardCount; i += 1) {
+    className = isWhite ? 'black' : 'white';
 
-    str += '<span class="' + className + '"></span>';
+    str += `<span class="${className}"></span>`;
 
     isWhite = !isWhite;
 
@@ -24,18 +24,18 @@ function printBoards() {
 
 function select(event) {
   if ($select) {
-    $select.className = $select.className.replace(" select", "");
+    $select.className = $select.className.replace(' select', '');
   }
-  var el = event.currentTarget;
-  el.className += " select";
+  const el = event.currentTarget;
+  el.className += ' select';
   $select = el;
 }
 
 function addEvent() {
-  var $boards = document.querySelectorAll("span");
-  var boardsLength = $boards.length;
-  for (var i = 0; i < boardsLength; i++) {
-    $boards[i].addEventListener("click", select);
+  const $boards = document.querySelectorAll('span');
+  const boardsLength = $boards.length;
+  for (let i = 0; i < boardsLength; i += 1) {
+    $boards[i].addEventListener('click', select);
   }
 }
 
