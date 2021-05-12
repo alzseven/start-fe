@@ -6,9 +6,10 @@ const headers = { Authorization: 'KakaoAK 6fe8c7ed7fda1db609155e2795463e7b' };
 
 function sucess(data) {
   const { documents } = data;
-  const li = documents.map((doc) => {
-    return `<li class="list-group-item"><a href="${doc.url}" target="_blank">${doc.title}</a></li>`;
-  });
+  const li = documents.map(
+    (doc) =>
+      `<li class="list-group-item"><a href="${doc.url}" target="_blank">${doc.title}</a></li>`,
+  );
   $result.innerHTML = `<ul class="list-group list-group-flush">${li.join(
     '',
   )}</ul>`;
