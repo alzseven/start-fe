@@ -1,7 +1,9 @@
+import { saveData } from './data-manager';
+
 const $result = document.querySelector('#result');
 
 function render(data) {
-  console.log(data);
+  saveData(data);
   // eslint-disable-next-line arrow-body-style
   const html = data.map((todo, index) => {
     return `<li data-index="${index}">
